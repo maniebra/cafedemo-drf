@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # my apps
     'backend.cafedemo.users',
     'menu',
+    'cart',
     # third-party apps
     'rest_framework',
     'rest_framework.authtoken',

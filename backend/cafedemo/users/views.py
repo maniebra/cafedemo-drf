@@ -16,14 +16,16 @@ logger = logging.getLogger(__name__)
 
 class UsersNoParamViewSet(APIView):
     authentication_classes = [JWTTokenUserAuthentication]
+    permission_classes = [AllowAny]
 
-    permission_classes = [IsAuthenticated]
     @extend_schema(
         request=None,
         responses={201: UserSerializer, 401: OpenApiExample('Authorization Error')},
         description="Get the current user's information or all users if the current user is an admin",
     )
     def get(self, request):
+        self.permission_classes = [IsAuthenticated]
+        self.check_permissions(request)
         current_user = get_current_user(request)
         if is_current_user_admin(request):
             users = User.objects.all()
@@ -31,13 +33,14 @@ class UsersNoParamViewSet(APIView):
             return Response(serializer.data)
         return Response(status=201, data=UserSerializer(current_user).data)
 
-    permission_classes = [AllowAny]
     @extend_schema(
         request=UserCreateSerializer,
         responses={201: UserSerializer, 400: OpenApiExample('Validation Error', value={"error": "Invalid data"})},
         description="Create a new user",
     )
     def post(self, request):
+        self.permission_classes = [AllowAny]
+        self.check_permissions(request)
         user_data = request.data
         if 'is_admin' in user_data:
             return Response(status=403, data={"message": "You cannot create an admin user."})
@@ -47,13 +50,14 @@ class UsersNoParamViewSet(APIView):
             return Response(serializer.data)
         return Response(status=400, data=serializer.errors)
 
-    permission_classes = [IsAuthenticated]
     @extend_schema(
         request=None,
         responses={201: UserSerializer, 401: OpenApiExample('Authorization Error')},
         description="Delete the current user",
     )
     def delete(self, request):
+        self.permission_classes = [IsAuthenticated]
+        self.check_permissions(request)
         user = User.objects.filter(id=id).first()
         if user:
             user.delete()
@@ -92,6 +96,8 @@ class UsersParamsViewSet(APIView):
         user = User.objects.filter(id=id).first()
         if user:
             if is_current_user_admin(request) or user.id == request.user.id:
+                if 'is_admin' in request.data and not is_current_user_admin(request):
+                    return Response(status=403, data={"message": "You cannot set is_admin if you are not an admin."})
                 user_data = request.data
                 serializer = UserSerializer(user, data=user_data)
                 if serializer.is_valid():

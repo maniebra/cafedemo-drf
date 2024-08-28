@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93e6123c-678d-43a1-bf81-de22be08c92d" name="Changes" comment="added some U.V. files">
-      <change afterPath="$PROJECT_DIR$/backend/cafedemo/cart/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/cafedemo/cart/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/cafedemo/cart/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/cafedemo/cart/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/cafedemo/cart/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/cafedemo/cart/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/cafedemo/cart/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/cafedemo/cart/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/cafedemo/cart/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/cafedemo/cafedemo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/cafedemo/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/cafedemo/cafedemo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/cafedemo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/cafedemo/cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/cart/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/cafedemo/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/cart/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/cafedemo/menu/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/menu/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/cafedemo/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,30 +39,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Make Migrations.executor": "Run",
-    "Python.Migrate.executor": "Run",
-    "Python.Run Server.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ToolWindow.GitHub Copilot Chat.ShowToolbar": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/mani/Projects/Practical/CafeDemo/backend/cafedemo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Make Migrations.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Migrate.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Run Server.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ToolWindow.GitHub Copilot Chat.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mani/Projects/Practical/CafeDemo/backend/cafedemo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend/cafedemo" />
@@ -181,6 +176,7 @@
       <workItem from="1724745023025" duration="1000" />
       <workItem from="1724745033538" duration="2000" />
       <workItem from="1724745045764" duration="16835000" />
+      <workItem from="1724831389742" duration="4941000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -228,8 +224,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="added some U.V. files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CafeDemo$Migrate.coverage" NAME="Migrate Coverage Results" MODIFIED="1724799469242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/CafeDemo$Make_Migrations.coverage" NAME="Make Migrations Coverage Results" MODIFIED="1724799468432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/CafeDemo$Run_Server.coverage" NAME="Run Server Coverage Results" MODIFIED="1724799470097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CafeDemo$Migrate.coverage" NAME="Migrate Coverage Results" MODIFIED="1724833527897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CafeDemo$Make_Migrations.coverage" NAME="Make Migrations Coverage Results" MODIFIED="1724833527115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CafeDemo$Run_Server.coverage" NAME="Run Server Coverage Results" MODIFIED="1724833528845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

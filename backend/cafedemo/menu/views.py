@@ -67,6 +67,9 @@ class DrinksParamViewSet(APIView):
         responses=DrinksSerializer
     )
     def put(self, request, id):
+        if not is_current_user_admin(request):
+            return Response({"error": "You are not authorized to perform this action"},
+                            status=status.HTTP_403_FORBIDDEN)
         try:
             drink = Drinks.objects.get(id=id)
         except Drinks.DoesNotExist:
@@ -82,6 +85,9 @@ class DrinksParamViewSet(APIView):
         responses=None
     )
     def delete(self, request, id):
+        if not is_current_user_admin(request):
+            return Response({"error": "You are not authorized to perform this action"},
+                            status=status.HTTP_403_FORBIDDEN)
         try:
             drink = Drinks.objects.get(id=id)
         except Drinks.DoesNotExist:
@@ -141,6 +147,9 @@ class FoodParamViewSet(APIView):
         responses=FoodSerializer
     )
     def put(self, request, id):
+        if not is_current_user_admin(request):
+            return Response({"error": "You are not authorized to perform this action"},
+                            status=status.HTTP_403_FORBIDDEN)
         try:
             food = Food.objects.get(id=id)
         except Food.DoesNotExist:
@@ -156,6 +165,9 @@ class FoodParamViewSet(APIView):
         responses=None
     )
     def delete(self, request, id):
+        if not is_current_user_admin(request):
+            return Response({"error": "You are not authorized to perform this action"},
+                            status=status.HTTP_403_FORBIDDEN)
         try:
             food = Food.objects.get(id=id)
         except Food.DoesNotExist:

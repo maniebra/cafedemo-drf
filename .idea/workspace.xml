@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93e6123c-678d-43a1-bf81-de22be08c92d" name="Changes" comment="added some U.V. files">
+    <list default="true" id="93e6123c-678d-43a1-bf81-de22be08c92d" name="Changes" comment="added carts and orders functionalities">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/cafedemo/cafedemo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/cafedemo/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/cafedemo/cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/cart/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/cafedemo/cafedemo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/cafedemo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/cafedemo/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/cafedemo/menu/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/menu/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/cafedemo/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,12 +21,25 @@
       <list>
         <option value="SQL File" />
         <option value="Python Script" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;maniebra&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/maniebra/cafedemo-drf.git&quot;,
+    &quot;accountId&quot;: &quot;89937dbe-86e9-43ce-b4d7-d699878b53ca&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -39,30 +51,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Make Migrations.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Migrate.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Run Server.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ToolWindow.GitHub Copilot Chat.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mani/Projects/Practical/CafeDemo/backend/cafedemo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.Docker Image.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.docker-compose.yaml.web: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
+    "Python.Make Migrations.executor": "Run",
+    "Python.Migrate.executor": "Run",
+    "Python.Run Server.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindow.GitHub Copilot Chat.ShowToolbar": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/mani/Projects/Practical/CafeDemo/backend/cafedemo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend/cafedemo" />
@@ -71,7 +87,7 @@
       <recent name="$PROJECT_DIR$/backend" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Run Server">
+  <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
     <configuration name="Make Migrations" type="PythonConfigurationType" factoryName="Python">
       <module name="CafeDemo" />
       <option name="ENV_FILES" value="" />
@@ -147,11 +163,66 @@
         <option name="RunConfigurationTask" enabled="true" run_configuration_name="Migrate" run_configuration_type="PythonConfigurationType" />
       </method>
     </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
+      <deployment type="docker-image">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.web: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="web" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.docker-compose.yaml.web: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+      <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="Python.Make Migrations" />
       <item itemvalue="Python.Migrate" />
       <item itemvalue="Python.Run Server" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.web: Compose Deployment" />
+        <item itemvalue="Docker.Dockerfile" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -176,7 +247,9 @@
       <workItem from="1724745023025" duration="1000" />
       <workItem from="1724745033538" duration="2000" />
       <workItem from="1724745045764" duration="16835000" />
-      <workItem from="1724831389742" duration="4941000" />
+      <workItem from="1724831389742" duration="14793000" />
+      <workItem from="1724917478341" duration="38000" />
+      <workItem from="1724917563112" duration="4653000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -210,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724799245636</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added carts and orders functionalities">
+      <option name="closed" value="true" />
+      <created>1724842685341</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724842685341</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,11 +302,12 @@
     <MESSAGE value="added jwt" />
     <MESSAGE value="completed menu and users" />
     <MESSAGE value="added some U.V. files" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some U.V. files" />
+    <MESSAGE value="added carts and orders functionalities" />
+    <option name="LAST_COMMIT_MESSAGE" value="added carts and orders functionalities" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CafeDemo$Migrate.coverage" NAME="Migrate Coverage Results" MODIFIED="1724833527897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/CafeDemo$Make_Migrations.coverage" NAME="Make Migrations Coverage Results" MODIFIED="1724833527115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/CafeDemo$Run_Server.coverage" NAME="Run Server Coverage Results" MODIFIED="1724833528845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CafeDemo$Migrate.coverage" NAME="Migrate Coverage Results" MODIFIED="1724920925202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CafeDemo$Make_Migrations.coverage" NAME="Make Migrations Coverage Results" MODIFIED="1724920923596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CafeDemo$Run_Server.coverage" NAME="Run Server Coverage Results" MODIFIED="1724920926966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

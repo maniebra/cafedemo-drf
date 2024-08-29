@@ -84,8 +84,10 @@ class OrderView(APIView):
         responses={200: OrderSerializer(many=True)}
     )
     def get(self, request):
-        user = User.objects.get(id=request.user.id)
-        queryset = Order.objects.filter(user=user)
+        queryset = Order.objects.all()
+        if not is_current_user_admin(request):
+            user = User.objects.get(id=request.user.id)
+            queryset = Order.objects.filter(user=user)
         serializer = OrderSerializer(queryset, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 

@@ -1,9 +1,8 @@
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 import re
-
 from rest_framework import serializers
-from .models import User
+from backend.cafedemo.users.models import User
 
 def user_validation(data):
     if not re.match("[a-zA-Z]", data['first_name']):

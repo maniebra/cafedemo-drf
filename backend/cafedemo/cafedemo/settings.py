@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     # my apps
     'backend.cafedemo.users',
     'menu',
-    'cart',
+    'backend.cafedemo.cart',
+    'reviews',
     # third-party apps
     'rest_framework',
     'rest_framework.authtoken',
@@ -88,7 +89,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "cafedemo",
-        "USER": "cafeadmin",
+        "USER": "postgres",
         "PASSWORD": "root",
         "HOST": "127.0.0.1",
         "PORT": "5432",

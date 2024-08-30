@@ -6,8 +6,8 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.authentication import JWTTokenUserAuthentication
 from backend.cafedemo.users.utils import is_current_user_admin
 from backend.cafedemo.users.models import User
-from .models import *
-from .serializers import CartSerializer, OrderSerializer, OrderItemsSerializer
+from backend.cafedemo.cart.models import *
+from backend.cafedemo.cart.serializers import CartSerializer, OrderSerializer, OrderItemsSerializer
 
 # Create your views here.
 

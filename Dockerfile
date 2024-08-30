@@ -34,8 +34,7 @@ exec "$@"' > /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 # Expose necessary ports
-EXPOSE 8000
-EXPOSE 5432
+EXPOSE 8000, 5432
 
 # Start the PostgreSQL service and Django development server
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]

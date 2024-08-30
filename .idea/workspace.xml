@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93e6123c-678d-43a1-bf81-de22be08c92d" name="Changes" comment="fixed some issues on cart">
-      <change afterPath="$PROJECT_DIR$/backend/cafedemo/reviews/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/cafedemo/reviews/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="93e6123c-678d-43a1-bf81-de22be08c92d" name="Changes" comment="added reviews">
       <change beforePath="$PROJECT_DIR$/backend/cafedemo/cafedemo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/cafedemo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/cafedemo/cafedemo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/cafedemo/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/cafedemo/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/cafedemo/users/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cafedemo/users/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +249,7 @@
       <workItem from="1724917478341" duration="38000" />
       <workItem from="1724917563112" duration="6954000" />
       <workItem from="1725005029118" duration="185000" />
-      <workItem from="1725005245089" duration="5518000" />
+      <workItem from="1725005245089" duration="5701000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -315,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725005899508</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added reviews">
+      <option name="closed" value="true" />
+      <created>1725024245113</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725024245113</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,11 +329,12 @@
     <MESSAGE value="added carts and orders functionalities" />
     <MESSAGE value="dockerized the project" />
     <MESSAGE value="fixed some issues on cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some issues on cart" />
+    <MESSAGE value="added reviews" />
+    <option name="LAST_COMMIT_MESSAGE" value="added reviews" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CafeDemo$Migrate.coverage" NAME="Migrate Coverage Results" MODIFIED="1725023979151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/CafeDemo$Make_Migrations.coverage" NAME="Make Migrations Coverage Results" MODIFIED="1725024084021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/CafeDemo$Run_Server.coverage" NAME="Run Server Coverage Results" MODIFIED="1725023980640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CafeDemo$Migrate.coverage" NAME="Migrate Coverage Results" MODIFIED="1725024214114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CafeDemo$Make_Migrations.coverage" NAME="Make Migrations Coverage Results" MODIFIED="1725024212918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CafeDemo$Run_Server.coverage" NAME="Run Server Coverage Results" MODIFIED="1725024215392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

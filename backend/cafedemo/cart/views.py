@@ -37,10 +37,15 @@ class CartView(APIView):
         serializer = CartSerializer(queryset, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+
+class CartParamsView(APIView):
+    authentication_classes = [JWTTokenUserAuthentication]
+    permission_classes = [IsAuthenticated]
+
     @extend_schema(
         responses={200: CartSerializer}
     )
-    def put(self, request):
+    def put(self, request, id):
         data = request.data
         user = User.objects.get(id=request.user.id)
         cart = Cart.objects.get(user=user, product=data['product'])
@@ -53,12 +58,12 @@ class CartView(APIView):
     @extend_schema(
         responses={200: CartSerializer}
     )
-    def delete(self, request):
-        data = request.data
+    def delete(self, request, id):
         user = User.objects.get(id=request.user.id)
-        cart = Cart.objects.get(user=user, product=data['product'])
+        cart = Cart.objects.get(user=user, product=id)
         cart.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
 
 class OrderView(APIView):
     authentication_classes = [JWTTokenUserAuthentication]
@@ -91,14 +96,29 @@ class OrderView(APIView):
         serializer = OrderSerializer(queryset, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    # only admin should be able to edit orders
+
+class OrderParamsView(APIView):
+    authentication_classes = [JWTTokenUserAuthentication]
+    permission_classes = [IsAuthenticated]
+
+
+    @extend_schema(
+        responses={200: OrderSerializer(many=True)}
+    )
+    def get(self, request, id):
+        if is_current_user_admin(request):
+            queryset = Order.objects.filter(id=id)
+            serializer = OrderSerializer(queryset, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(status=status.HTTP_403_FORBIDDEN)
+
     @extend_schema(
         responses={200: OrderSerializer}
     )
-    def put(self, request):
-        if is_current_user_admin(request.user):
+    def put(self, request, id):
+        if is_current_user_admin(request):
+            order = Order.objects.get(id)
             data = request.data
-            order = Order.objects.get(id=data['id'])
             serializer = OrderSerializer(order, data=data)
             if serializer.is_valid():
                 serializer.save()
@@ -106,17 +126,15 @@ class OrderView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         return Response(status=status.HTTP_403_FORBIDDEN)
 
-    # only admin should be able to delete orders
     @extend_schema(
         responses={200: OrderSerializer}
     )
-    def delete(self, request):
-        if is_current_user_admin(request.user):
-            data = request.data
-            order = Order.objects.get(id=data['id'])
+    def delete(self, request, id):
+        if is_current_user_admin(request):
+            order = Order.objects.get(id)
             order.delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
-        return Response(status=status.HTTP_403_FORBIDDEN)
+
 
 class OrderItemsView(APIView):
     authentication_classes = [JWTTokenUserAuthentication]
